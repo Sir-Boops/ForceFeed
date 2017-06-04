@@ -19,7 +19,7 @@ public class Main
 {
     public static final String MODID = "forcefeed";
     public static final String NAME = "Force Feed";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "1.0.0";
     
     
     // Add a creative tab
