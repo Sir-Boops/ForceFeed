@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "forcefeed",
+  "name": "Force Feed",
+  "description": "Why eat manually?",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "url": "https://git.frgl.pw/Sir_Boops/ForceFeed",
+  "updateUrl": "https://git.frgl.pw/Sir_Boops/ForceFeed",
+  "authorList": ["Sir_Boops"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
