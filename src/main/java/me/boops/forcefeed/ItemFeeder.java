@@ -18,6 +18,7 @@ public class ItemFeeder extends Item {
 		// Set the names
 		this.setUnlocalizedName("force_feeder");
 		this.setRegistryName(Main.MODID, this.getUnlocalizedName());
+		this.setMaxStackSize(1);
 		
 	}
 	
@@ -32,16 +33,22 @@ public class ItemFeeder extends Item {
 				
 				InventoryPlayer inv = player.inventory;
 				
-				for (int i=0; inv.getSizeInventory()>i; i++){
+				boolean done = false;
+				
+				for (int i=0; inv.getSizeInventory()>i && !done; i++){
 					
 					if(inv.getStackInSlot(i).getItem() instanceof ItemFood){
 						
+						done = true;
+						
 						ItemFood food = (ItemFood) inv.getStackInSlot(i).getItem();
+						int meta = inv.getStackInSlot(i).getItem().getMetadata(inv.getStackInSlot(i));
 						
 						player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel() + food.getHealAmount(inv.getStackInSlot(i)));
 						
 						ItemStack newFood = new ItemStack(food);
 						newFood.setCount(inv.getStackInSlot(i).getCount() - 1);
+						newFood.setItemDamage(meta);
 						
 						inv.setInventorySlotContents(i, newFood);
 						
