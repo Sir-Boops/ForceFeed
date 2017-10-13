@@ -1,5 +1,6 @@
 package me.boops.forcefeed;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -13,7 +14,7 @@ public class ItemFeeder extends Item {
 	public ItemFeeder(){
 		
 		// Set the tab
-		this.setCreativeTab(Main.tab);
+		this.setCreativeTab(CreativeTabs.MISC);
 		
 		// Set the names
 		this.setUnlocalizedName("force_feeder");
